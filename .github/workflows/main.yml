@@ -8,7 +8,7 @@ on:
     
 jobs:
   build_android:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - uses: subosito/flutter-action@v2
@@ -20,7 +20,7 @@ jobs:
     - name: Install dependencies
       run: flutter pub get
     - name: Build APK
-      run: flutter build apk --debug
+      run: flutter build apk -t lib/dev_main.dart --debug
     - name: Rename APK
       run: mv build/app/outputs/flutter-apk/app-debug.apk ./ExampleApp-SNAPSHOT.apk
     - name: Archive APK
