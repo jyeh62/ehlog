@@ -2,20 +2,19 @@ import 'package:ehynsta/ui/viewmodel/firebase_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-
-class SignInPage extends StatefulWidget {
-
-  const SignInPage({Key? key}) : super(key: key);
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({Key? key}) : super(key: key);
 
   @override
-  SignInPageState createState() => SignInPageState();
+  _SignUpPageState createState() => _SignUpPageState();
 }
 
-class SignInPageState extends State<SignInPage> {
+class _SignUpPageState extends State<SignUpPage> {
   final TextEditingController _mailCon = TextEditingController();
   final TextEditingController _pwCon = TextEditingController();
+  final TextEditingController _nameCon = TextEditingController();
 
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   FirebaseProvider? fp;
 
   @override
@@ -31,7 +30,7 @@ class SignInPageState extends State<SignInPage> {
 
     return Scaffold(
         key: _scaffoldKey,
-        appBar: AppBar(title: const Text("Sign In Page")),
+        appBar: AppBar(title: const Text("Sign Up Page")),
         body: ListView(
           children: <Widget>[
             Container(
@@ -44,7 +43,7 @@ class SignInPageState extends State<SignInPage> {
                     decoration: const BoxDecoration(color: Colors.amber),
                     child: const Center(
                       child: Text(
-                        "Sign In",
+                        "Sign Up",
                         style: TextStyle(
                             color: Colors.blueGrey,
                             fontSize: 18,
@@ -75,6 +74,14 @@ class SignInPageState extends State<SignInPage> {
                           ),
                           obscureText: true,
                         ),
+                        TextField(
+                          controller: _nameCon,
+                          decoration: const InputDecoration(
+                            prefixIcon: Icon(Icons.account_box),
+                            hintText: "Name",
+                          ),
+                          obscureText: true,
+                        )
                       ].map((c) {
                         return Padding(
                           padding: const EdgeInsets.symmetric(
@@ -94,13 +101,13 @@ class SignInPageState extends State<SignInPage> {
               child: RaisedButton(
                 color: Colors.indigo[300],
                 child: const Text(
-                  "Sign In",
+                  "Sign Up",
                   style: TextStyle(color: Colors.white),
                 ),
                 onPressed: () {
                   FocusScope.of(context)
                       .requestFocus(FocusNode()); // 키보드 감춤
-                  _signIn();
+                  _signUp();
                 },
               ),
             ),
@@ -108,11 +115,11 @@ class SignInPageState extends State<SignInPage> {
         ));
   }
 
-  void _signIn() async {
-    bool result = await fp?.signInWithEmail(_mailCon.text, _pwCon.text)??false;
-    logger.d("_signIn result : $result");
+  void _signUp() async {
+    bool result = await fp?.signUpWithEmail(_mailCon.text, _pwCon.text, _nameCon.text)??false;
+    logger.d("_signUp result : $result");
     if(result) {
-      logger.d("_signIn fp?.getUser(); : ${fp?.getUser()}");
+      logger.d("_signUp fp?.getUser(); : ${fp?.getUser()}");
     }
   }
 }

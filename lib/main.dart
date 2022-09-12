@@ -59,24 +59,24 @@ class _MyHomePageState extends State<MyHomePage> {
 
     logger.d("main");
     return Scaffold(
-      appBar: AppBar(title: Text("Flutter Firebase")),
+      appBar: AppBar(title: const Text("Flutter Firebase")),
       body: ListView(
         children: <Widget>[
           ListTile(
-            title: Text("Google Sign-In Demo"),
-            subtitle: Text("google_sign_in Plugin"),
+            title: const Text("Sign up"),
+            subtitle: const Text("join"),
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const AuthPage()));
             },
           ),
           ListTile(
-            title: Text("Firebase Auth"),
+            title: const Text("Firebase Auth"),
             onTap: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => const AuthPage()));
             },
-          )
+          ),
         ].map((child) {
           return Card(
             child: child,

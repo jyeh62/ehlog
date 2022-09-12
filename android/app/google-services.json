@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "583453564816",
+    "firebase_url": "https://mymemo-8bdea.firebaseio.com",
+    "project_id": "mymemo-8bdea",
+    "storage_bucket": "mymemo-8bdea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583453564816:android:9f3e6336ebe17dc15fdd15",
+        "android_client_info": {
+          "package_name": "eh.jy.ehynsta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583453564816-o9o3tbsm8qg1sk8dedi4692b86hvqh08.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfpblbRm9JCxkxJo-r_iBFZ_f50A9UDFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583453564816-o9o3tbsm8qg1sk8dedi4692b86hvqh08.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583453564816:android:00b07b50bf75f206",
+        "android_client_info": {
+          "package_name": "eh.jy.mymemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583453564816-o9o3tbsm8qg1sk8dedi4692b86hvqh08.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfpblbRm9JCxkxJo-r_iBFZ_f50A9UDFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583453564816-o9o3tbsm8qg1sk8dedi4692b86hvqh08.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

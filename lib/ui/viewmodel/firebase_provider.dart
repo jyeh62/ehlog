@@ -31,7 +31,7 @@ class FirebaseProvider with ChangeNotifier {
   }
 
   // 이메일/비밀번호로 Firebase에 회원가입
-  Future<bool> signUpWithEmail(String email, String password) async {
+  Future<bool> signUpWithEmail(String email, String password, String name) async {
     try {
       UserCredential result = await fAuth.createUserWithEmailAndPassword(
           email: email, password: password);

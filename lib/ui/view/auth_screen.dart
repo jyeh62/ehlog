@@ -1,8 +1,7 @@
+import 'package:ehynsta/ui/view/signup_screen.dart';
 import 'package:ehynsta/ui/viewmodel/firebase_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import 'singin_screen.dart';
 
 class AuthPage extends StatefulWidget {
   const AuthPage({Key? key}) : super(key: key);
